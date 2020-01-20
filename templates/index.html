@@ -1,0 +1,45 @@
+<!-- https://code.sololearn.com/WQJ65P4YexPK/#js -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ჯეირანზოროსი</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+	<link rel="stylesheet" href="static/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+	<style>
+		.buttons {
+			margin: auto;
+			width: 50%;
+			padding: 100px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="buttons">
+		<a class="waves-effect waves-light btn" onclick="createInput(createRoom, 'რაუნდების რაოდენობა');">ოთახის შექმნა</a>
+		<a class="waves-effect waves-light btn" onclick="createInput(joinRoom, 'ოთახის ნომერი');">ოთახში შესვლა</a>
+	</div>
+	<div class="choices">
+		<div id="rock" class="choice">
+			<img src="https://cdn.rawgit.com/aronnax77/whatsdev_tutorials/ef296e2b/images/rock.png" alt="rock">
+		</div>
+		<div id="paper" class="choice">
+			<img src="https://cdn.rawgit.com/aronnax77/whatsdev_tutorials/ef296e2b/images/paper.png" alt="paper">
+		</div>
+		<div id="scissors" class="choice">
+			<img src="https://cdn.rawgit.com/aronnax77/whatsdev_tutorials/ef296e2b/images/scissors.png" alt="scissors">
+		</div>
+	</div>
+
+	<p id="action-message">შექმენით ან შედით ოთახში</p>
+</body>
+</html>
+<script src="static/main.js"></script>
+{% if autoConnect != None %}
+<script>joinRoom('{{ autoConnect }}');</script>
+{% endif %}

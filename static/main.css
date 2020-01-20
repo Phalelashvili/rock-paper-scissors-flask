@@ -1,0 +1,117 @@
+/*   A rock, paper, scissors game from a free tutorial by whatsdev.com with minor
+     modifications. See - https://www.whatsdev.com/
+
+     This is the last in a series of three free tutorial lessons:
+     See also https://code.sololearn.com/Wp1B0vPVWq4S/#html
+     and https://code.sololearn.com/WKk0nPAPfa51/#html
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #24272e;
+  }
+  
+  header {
+    background-color: white;
+    padding: 20px;
+  }
+  
+  header > h1 {
+    color: #25272e;
+    text-align: center;
+    font-family: Asap, sans-serif;
+  }
+  
+  .score-board {
+    margin: 20px auto;
+    border: 3px solid white;
+    border-radius: 4px;
+    text-align: center;
+    width: 200px;
+    color: white;
+    font-size: 46px;
+    padding: 15px 20px;
+    font-family: Asap, sans-serif;
+    position: relative;
+  }
+  
+  .badge {
+    background-color: #e25840;
+    color: white;
+    font-size: 14px;
+    padding: 2px 10px;
+    font-family: Asap, sans-serif;
+  }
+  
+  #user-label {
+    position: absolute;
+    top: 30px;
+    left: -25px;
+  }
+  
+  #comp-label {
+    position: absolute;
+    top: 30px;
+    right: -30px;
+  }
+  
+  .result {
+    font-size: 30px;
+    color: white;
+  }
+  
+  .result > p {
+    text-align: center;
+    font-weight: bold;
+    font-family: Asap, sans-serif;
+  }
+  
+  .choices {
+    margin: 50px 0;
+    text-align: center;
+  }
+  
+  .choice {
+    padding: 30px;
+    display: inline-block;
+  }
+  
+  .choice > img {
+    width: 100px;
+  }
+  
+  .choice:hover {
+    cursor: pointer;
+  }
+  
+  .green-glow {
+    border: 4px solid #4dcc7d;
+    box-shadow: 0 0 10px #31b43a;
+    border-radius: 50%;
+  }
+  
+  .red-glow {
+    border: 4px solid #fc121b;
+    box-shadow: 0 0 10px #d01115;
+    border-radius: 50%;
+  }
+  
+  .gray-glow {
+    border: 4px solid #464647;
+    box-shadow: 0 0 10px #25292b;
+    border-radius: 50%;
+  }
+  
+  #action-message {
+    text-align: center;
+    color: white;
+    font-family: Asap, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
